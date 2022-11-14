@@ -1,0 +1,1466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="8ec5c0d6-3f23-4d13-9230-5cbf9418e3c6" activeEnvironment="Default" name="WebServicesCaseStudy" resourceRoot="${projectDir}" soapui-version="5.6.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="18b7388b-0dfb-42ee-beca-27a07ece8721" wsaVersion="NONE" name="ParaBankSoapBinding" type="wsdl" bindingName="{http://service.parabank.parasoft.com/}ParaBankSoapBinding" soapVersion="1_1" anonymous="optional" definition="https://parabank.parasoft.com/parabank/services/ParaBank?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://parabank.parasoft.com/parabank/services/ParaBank?wsdl"><con:part><con:url>https://parabank.parasoft.com/parabank/services/ParaBank?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="ParaBank" targetNamespace="http://service.parabank.parasoft.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://service.parabank.parasoft.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://service.parabank.parasoft.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="account" type="tns:account"/>
+      <xs:element name="billPay" type="tns:billPay"/>
+      <xs:element name="billPayResponse" type="tns:billPayResponse"/>
+      <xs:element name="billPayResult" type="tns:billPayResult"/>
+      <xs:element name="buyPosition" type="tns:buyPosition"/>
+      <xs:element name="buyPositionResponse" type="tns:buyPositionResponse"/>
+      <xs:element name="cleanDB" type="tns:cleanDB"/>
+      <xs:element name="cleanDBResponse" type="tns:cleanDBResponse"/>
+      <xs:element name="createAccount" type="tns:createAccount"/>
+      <xs:element name="createAccountResponse" type="tns:createAccountResponse"/>
+      <xs:element name="customer" type="tns:customer"/>
+      <xs:element name="deposit" type="tns:deposit"/>
+      <xs:element name="depositResponse" type="tns:depositResponse"/>
+      <xs:element name="getAccount" type="tns:getAccount"/>
+      <xs:element name="getAccountResponse" type="tns:getAccountResponse"/>
+      <xs:element name="getAccounts" type="tns:getAccounts"/>
+      <xs:element name="getAccountsResponse" type="tns:getAccountsResponse"/>
+      <xs:element name="getCustomer" type="tns:getCustomer"/>
+      <xs:element name="getCustomerResponse" type="tns:getCustomerResponse"/>
+      <xs:element name="getPosition" type="tns:getPosition"/>
+      <xs:element name="getPositionHistory" type="tns:getPositionHistory"/>
+      <xs:element name="getPositionHistoryResponse" type="tns:getPositionHistoryResponse"/>
+      <xs:element name="getPositionResponse" type="tns:getPositionResponse"/>
+      <xs:element name="getPositions" type="tns:getPositions"/>
+      <xs:element name="getPositionsResponse" type="tns:getPositionsResponse"/>
+      <xs:element name="getTransaction" type="tns:getTransaction"/>
+      <xs:element name="getTransactionResponse" type="tns:getTransactionResponse"/>
+      <xs:element name="getTransactions" type="tns:getTransactions"/>
+      <xs:element name="getTransactionsByAmount" type="tns:getTransactionsByAmount"/>
+      <xs:element name="getTransactionsByAmountResponse" type="tns:getTransactionsByAmountResponse"/>
+      <xs:element name="getTransactionsByMonthAndType" type="tns:getTransactionsByMonthAndType"/>
+      <xs:element name="getTransactionsByMonthAndTypeResponse" type="tns:getTransactionsByMonthAndTypeResponse"/>
+      <xs:element name="getTransactionsByToFromDate" type="tns:getTransactionsByToFromDate"/>
+      <xs:element name="getTransactionsByToFromDateResponse" type="tns:getTransactionsByToFromDateResponse"/>
+      <xs:element name="getTransactionsOnDate" type="tns:getTransactionsOnDate"/>
+      <xs:element name="getTransactionsOnDateResponse" type="tns:getTransactionsOnDateResponse"/>
+      <xs:element name="getTransactionsResponse" type="tns:getTransactionsResponse"/>
+      <xs:element name="historyPoint" type="tns:historyPoint"/>
+      <xs:element name="initializeDB" type="tns:initializeDB"/>
+      <xs:element name="initializeDBResponse" type="tns:initializeDBResponse"/>
+      <xs:element name="loanResponse" type="tns:loanResponse"/>
+      <xs:element name="login" type="tns:login"/>
+      <xs:element name="loginResponse" type="tns:loginResponse"/>
+      <xs:element name="payee" type="tns:payee"/>
+      <xs:element name="position" type="tns:position"/>
+      <xs:element name="requestLoan" type="tns:requestLoan"/>
+      <xs:element name="requestLoanResponse" type="tns:requestLoanResponse"/>
+      <xs:element name="sellPosition" type="tns:sellPosition"/>
+      <xs:element name="sellPositionResponse" type="tns:sellPositionResponse"/>
+      <xs:element name="setParameter" type="tns:setParameter"/>
+      <xs:element name="setParameterResponse" type="tns:setParameterResponse"/>
+      <xs:element name="shutdownJmsListener" type="tns:shutdownJmsListener"/>
+      <xs:element name="shutdownJmsListenerResponse" type="tns:shutdownJmsListenerResponse"/>
+      <xs:element name="startupJmsListener" type="tns:startupJmsListener"/>
+      <xs:element name="startupJmsListenerResponse" type="tns:startupJmsListenerResponse"/>
+      <xs:element name="transaction" type="tns:transaction"/>
+      <xs:element name="transfer" type="tns:transfer"/>
+      <xs:element name="transferResponse" type="tns:transferResponse"/>
+      <xs:element name="updateCustomer" type="tns:updateCustomer"/>
+      <xs:element name="updateCustomerResponse" type="tns:updateCustomerResponse"/>
+      <xs:element name="withdraw" type="tns:withdraw"/>
+      <xs:element name="withdrawResponse" type="tns:withdrawResponse"/>
+      <xs:complexType name="startupJmsListener">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="startupJmsListenerResponse">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="buyPosition">
+        <xs:sequence>
+          <xs:element name="customerId" type="xs:int"/>
+          <xs:element name="accountId" type="xs:int"/>
+          <xs:element name="name" type="xs:string"/>
+          <xs:element name="symbol" type="xs:string"/>
+          <xs:element name="shares" type="xs:int"/>
+          <xs:element name="pricePerShare" type="xs:decimal"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="buyPositionResponse">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" ref="tns:position"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="position">
+        <xs:sequence>
+          <xs:element form="unqualified" name="positionId" type="xs:int"/>
+          <xs:element form="unqualified" name="customerId" type="xs:int"/>
+          <xs:element form="unqualified" minOccurs="0" name="name" type="xs:string"/>
+          <xs:element form="unqualified" minOccurs="0" name="symbol" type="xs:string"/>
+          <xs:element form="unqualified" name="shares" type="xs:int"/>
+          <xs:element form="unqualified" minOccurs="0" name="purchasePrice" type="xs:decimal"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getCustomer">
+        <xs:sequence>
+          <xs:element name="customerId" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getCustomerResponse">
+        <xs:sequence>
+          <xs:element ref="tns:customer"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="customer">
+        <xs:sequence>
+          <xs:element form="unqualified" name="id" type="xs:int"/>
+          <xs:element form="unqualified" minOccurs="0" name="firstName" type="xs:string"/>
+          <xs:element form="unqualified" minOccurs="0" name="lastName" type="xs:string"/>
+          <xs:element form="unqualified" minOccurs="0" name="address" type="tns:address"/>
+          <xs:element form="unqualified" minOccurs="0" name="phoneNumber" type="xs:string"/>
+          <xs:element form="unqualified" minOccurs="0" name="ssn" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="address">
+        <xs:sequence>
+          <xs:element form="unqualified" minOccurs="0" name="street" type="xs:string"/>
+          <xs:element form="unqualified" minOccurs="0" name="city" type="xs:string"/>
+          <xs:element form="unqualified" minOccurs="0" name="state" type="xs:string"/>
+          <xs:element form="unqualified" minOccurs="0" name="zipCode" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="initializeDB">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="initializeDBResponse">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="createAccount">
+        <xs:sequence>
+          <xs:element name="customerId" type="xs:int"/>
+          <xs:element name="newAccountType" type="xs:int"/>
+          <xs:element name="fromAccountId" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createAccountResponse">
+        <xs:sequence>
+          <xs:element ref="tns:account"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="account">
+        <xs:sequence>
+          <xs:element form="unqualified" name="id" type="xs:int"/>
+          <xs:element form="unqualified" name="customerId" type="xs:int"/>
+          <xs:element form="unqualified" minOccurs="0" name="type" type="tns:accountType"/>
+          <xs:element form="unqualified" minOccurs="0" name="balance" type="xs:decimal"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getAccounts">
+        <xs:sequence>
+          <xs:element name="customerId" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getAccountsResponse">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" ref="tns:account"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getTransactions">
+        <xs:sequence>
+          <xs:element name="accountId" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getTransactionsResponse">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" ref="tns:transaction"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="transaction">
+        <xs:sequence>
+          <xs:element form="unqualified" name="id" type="xs:int"/>
+          <xs:element form="unqualified" name="accountId" type="xs:int"/>
+          <xs:element form="unqualified" minOccurs="0" name="type" type="tns:transactionType"/>
+          <xs:element form="unqualified" minOccurs="0" name="date" type="xs:dateTime"/>
+          <xs:element form="unqualified" minOccurs="0" name="amount" type="xs:decimal"/>
+          <xs:element form="unqualified" minOccurs="0" name="description" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getTransactionsOnDate">
+        <xs:sequence>
+          <xs:element name="accountId" type="xs:int"/>
+          <xs:element name="onDate" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getTransactionsOnDateResponse">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" ref="tns:transaction"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="withdraw">
+        <xs:sequence>
+          <xs:element name="accountId" type="xs:int"/>
+          <xs:element name="amount" type="xs:decimal"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="withdrawResponse">
+        <xs:sequence>
+          <xs:element name="withdrawReturn" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="updateCustomer">
+        <xs:sequence>
+          <xs:element name="customerId" type="xs:int"/>
+          <xs:element name="firstName" type="xs:string"/>
+          <xs:element name="lastName" type="xs:string"/>
+          <xs:element name="street" type="xs:string"/>
+          <xs:element name="city" type="xs:string"/>
+          <xs:element name="state" type="xs:string"/>
+          <xs:element name="zipCode" type="xs:string"/>
+          <xs:element name="phoneNumber" type="xs:string"/>
+          <xs:element name="ssn" type="xs:string"/>
+          <xs:element name="username" type="xs:string"/>
+          <xs:element name="password" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="updateCustomerResponse">
+        <xs:sequence>
+          <xs:element name="customerUpdateResult" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="deposit">
+        <xs:sequence>
+          <xs:element name="accountId" type="xs:int"/>
+          <xs:element name="amount" type="xs:decimal"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="depositResponse">
+        <xs:sequence>
+          <xs:element name="depositReturn" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getTransactionsByToFromDate">
+        <xs:sequence>
+          <xs:element name="accountId" type="xs:int"/>
+          <xs:element name="fromDate" type="xs:string"/>
+          <xs:element name="toDate" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getTransactionsByToFromDateResponse">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" ref="tns:transaction"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="shutdownJmsListener">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="shutdownJmsListenerResponse">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="getPosition">
+        <xs:sequence>
+          <xs:element name="positionId" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getPositionResponse">
+        <xs:sequence>
+          <xs:element ref="tns:position"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="transfer">
+        <xs:sequence>
+          <xs:element name="fromAccountId" type="xs:int"/>
+          <xs:element name="toAccountId" type="xs:int"/>
+          <xs:element name="amount" type="xs:decimal"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="transferResponse">
+        <xs:sequence>
+          <xs:element name="transferReturn" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="login">
+        <xs:sequence>
+          <xs:element name="username" type="xs:string"/>
+          <xs:element name="password" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="loginResponse">
+        <xs:sequence>
+          <xs:element name="customerId" type="tns:customer"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getTransactionsByMonthAndType">
+        <xs:sequence>
+          <xs:element name="accountId" type="xs:int"/>
+          <xs:element name="month" type="xs:string"/>
+          <xs:element name="type" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getTransactionsByMonthAndTypeResponse">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" ref="tns:transaction"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getPositionHistory">
+        <xs:sequence>
+          <xs:element name="positionId" type="xs:int"/>
+          <xs:element name="startDate" type="xs:string"/>
+          <xs:element name="endDate" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getPositionHistoryResponse">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" ref="tns:historyPoint"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="historyPoint">
+        <xs:sequence>
+          <xs:element form="unqualified" minOccurs="0" name="symbol" type="xs:string"/>
+          <xs:element form="unqualified" minOccurs="0" name="date" type="xs:dateTime"/>
+          <xs:element form="unqualified" minOccurs="0" name="closingPrice" type="xs:decimal"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getTransaction">
+        <xs:sequence>
+          <xs:element name="transactionId" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getTransactionResponse">
+        <xs:sequence>
+          <xs:element ref="tns:transaction"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="setParameter">
+        <xs:sequence>
+          <xs:element name="name" type="xs:string"/>
+          <xs:element name="value" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="setParameterResponse">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="getPositions">
+        <xs:sequence>
+          <xs:element name="customerId" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getPositionsResponse">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" ref="tns:position"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getTransactionsByAmount">
+        <xs:sequence>
+          <xs:element name="accountId" type="xs:int"/>
+          <xs:element name="amount" type="xs:decimal"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getTransactionsByAmountResponse">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" ref="tns:transaction"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="sellPosition">
+        <xs:sequence>
+          <xs:element name="customerId" type="xs:int"/>
+          <xs:element name="accountId" type="xs:int"/>
+          <xs:element name="positionId" type="xs:int"/>
+          <xs:element name="shares" type="xs:int"/>
+          <xs:element name="pricePerShare" type="xs:decimal"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="sellPositionResponse">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" ref="tns:position"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="cleanDB">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="cleanDBResponse">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="requestLoan">
+        <xs:sequence>
+          <xs:element name="customerId" type="xs:int"/>
+          <xs:element name="amount" type="xs:decimal"/>
+          <xs:element name="downPayment" type="xs:decimal"/>
+          <xs:element name="fromAccountId" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="requestLoanResponse">
+        <xs:sequence>
+          <xs:element ref="tns:loanResponse"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="loanResponse">
+        <xs:sequence>
+          <xs:element form="unqualified" minOccurs="0" name="responseDate" type="xs:dateTime"/>
+          <xs:element form="unqualified" name="loanProviderName" type="xs:string"/>
+          <xs:element form="unqualified" name="approved" type="xs:boolean"/>
+          <xs:element form="unqualified" minOccurs="0" name="message" type="xs:string"/>
+          <xs:element form="unqualified" minOccurs="0" name="accountId" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getAccount">
+        <xs:sequence>
+          <xs:element name="accountId" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getAccountResponse">
+        <xs:sequence>
+          <xs:element ref="tns:account"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="billPay">
+        <xs:sequence>
+          <xs:element name="arg0" type="xs:int"/>
+          <xs:element name="arg1" type="xs:decimal"/>
+          <xs:element name="arg2" type="tns:payee"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="payee">
+        <xs:sequence>
+          <xs:element form="unqualified" minOccurs="0" name="accountNumber" type="xs:int"/>
+          <xs:element form="unqualified" minOccurs="0" name="address" type="tns:address"/>
+          <xs:element form="unqualified" minOccurs="0" name="name" type="xs:string"/>
+          <xs:element form="unqualified" minOccurs="0" name="phoneNumber" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="billPayResponse">
+        <xs:sequence>
+          <xs:element name="return" type="tns:billPayResult"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="billPayResult">
+        <xs:sequence>
+          <xs:element form="unqualified" name="accountId" type="xs:int"/>
+          <xs:element form="unqualified" minOccurs="0" name="amount" type="xs:decimal"/>
+          <xs:element form="unqualified" minOccurs="0" name="payeeName" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="accountType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="CHECKING"/>
+          <xs:enumeration value="SAVINGS"/>
+          <xs:enumeration value="LOAN"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="transactionType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Credit"/>
+          <xs:enumeration value="Debit"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="ParaBankServiceException" type="tns:ParaBankServiceException"/>
+      <xs:complexType name="ParaBankServiceException">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="message" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="buyPosition">
+    <wsdl:part element="tns:buyPosition" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCustomer">
+    <wsdl:part element="tns:getCustomer" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="initializeDB">
+    <wsdl:part element="tns:initializeDB" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="initializeDBResponse">
+    <wsdl:part element="tns:initializeDBResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="sellPositionResponse">
+    <wsdl:part element="tns:sellPositionResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createAccount">
+    <wsdl:part element="tns:createAccount" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAccounts">
+    <wsdl:part element="tns:getAccounts" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAccountsResponse">
+    <wsdl:part element="tns:getAccountsResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTransactions">
+    <wsdl:part element="tns:getTransactions" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="loginResponse">
+    <wsdl:part element="tns:loginResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPositionHistoryResponse">
+    <wsdl:part element="tns:getPositionHistoryResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateCustomer">
+    <wsdl:part element="tns:updateCustomer" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deposit">
+    <wsdl:part element="tns:deposit" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTransactionsOnDateResponse">
+    <wsdl:part element="tns:getTransactionsOnDateResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="transfer">
+    <wsdl:part element="tns:transfer" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTransactionsByToFromDateResponse">
+    <wsdl:part element="tns:getTransactionsByToFromDateResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPositionsResponse">
+    <wsdl:part element="tns:getPositionsResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="depositResponse">
+    <wsdl:part element="tns:depositResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cleanDBResponse">
+    <wsdl:part element="tns:cleanDBResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTransactionsByMonthAndType">
+    <wsdl:part element="tns:getTransactionsByMonthAndType" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="withdrawResponse">
+    <wsdl:part element="tns:withdrawResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPositionHistory">
+    <wsdl:part element="tns:getPositionHistory" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPositions">
+    <wsdl:part element="tns:getPositions" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTransactionsByAmount">
+    <wsdl:part element="tns:getTransactionsByAmount" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="cleanDB">
+    <wsdl:part element="tns:cleanDB" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="requestLoan">
+    <wsdl:part element="tns:requestLoan" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="startupJmsListener">
+    <wsdl:part element="tns:startupJmsListener" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setParameterResponse">
+    <wsdl:part element="tns:setParameterResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="billPayResponse">
+    <wsdl:part element="tns:billPayResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createAccountResponse">
+    <wsdl:part element="tns:createAccountResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTransactionsOnDate">
+    <wsdl:part element="tns:getTransactionsOnDate" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAccountResponse">
+    <wsdl:part element="tns:getAccountResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="withdraw">
+    <wsdl:part element="tns:withdraw" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateCustomerResponse">
+    <wsdl:part element="tns:updateCustomerResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTransactionsByAmountResponse">
+    <wsdl:part element="tns:getTransactionsByAmountResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTransactionsByToFromDate">
+    <wsdl:part element="tns:getTransactionsByToFromDate" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTransactionsByMonthAndTypeResponse">
+    <wsdl:part element="tns:getTransactionsByMonthAndTypeResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="shutdownJmsListener">
+    <wsdl:part element="tns:shutdownJmsListener" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPosition">
+    <wsdl:part element="tns:getPosition" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="login">
+    <wsdl:part element="tns:login" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPositionResponse">
+    <wsdl:part element="tns:getPositionResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getCustomerResponse">
+    <wsdl:part element="tns:getCustomerResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTransactionResponse">
+    <wsdl:part element="tns:getTransactionResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="startupJmsListenerResponse">
+    <wsdl:part element="tns:startupJmsListenerResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTransaction">
+    <wsdl:part element="tns:getTransaction" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setParameter">
+    <wsdl:part element="tns:setParameter" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="requestLoanResponse">
+    <wsdl:part element="tns:requestLoanResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ParaBankServiceException">
+    <wsdl:part element="tns:ParaBankServiceException" name="ParaBankServiceException"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="transferResponse">
+    <wsdl:part element="tns:transferResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTransactionsResponse">
+    <wsdl:part element="tns:getTransactionsResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="shutdownJmsListenerResponse">
+    <wsdl:part element="tns:shutdownJmsListenerResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="buyPositionResponse">
+    <wsdl:part element="tns:buyPositionResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="sellPosition">
+    <wsdl:part element="tns:sellPosition" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAccount">
+    <wsdl:part element="tns:getAccount" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="billPay">
+    <wsdl:part element="tns:billPay" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ParaBankService">
+    <wsdl:operation name="startupJmsListener">
+      <wsdl:input message="tns:startupJmsListener" name="startupJmsListener"></wsdl:input>
+      <wsdl:output message="tns:startupJmsListenerResponse" name="startupJmsListenerResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buyPosition">
+      <wsdl:input message="tns:buyPosition" name="buyPosition"></wsdl:input>
+      <wsdl:output message="tns:buyPositionResponse" name="buyPositionResponse"></wsdl:output>
+      <wsdl:fault message="tns:ParaBankServiceException" name="ParaBankServiceException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomer">
+      <wsdl:input message="tns:getCustomer" name="getCustomer"></wsdl:input>
+      <wsdl:output message="tns:getCustomerResponse" name="getCustomerResponse"></wsdl:output>
+      <wsdl:fault message="tns:ParaBankServiceException" name="ParaBankServiceException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="initializeDB">
+      <wsdl:input message="tns:initializeDB" name="initializeDB"></wsdl:input>
+      <wsdl:output message="tns:initializeDBResponse" name="initializeDBResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createAccount">
+      <wsdl:input message="tns:createAccount" name="createAccount"></wsdl:input>
+      <wsdl:output message="tns:createAccountResponse" name="createAccountResponse"></wsdl:output>
+      <wsdl:fault message="tns:ParaBankServiceException" name="ParaBankServiceException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getAccounts">
+      <wsdl:input message="tns:getAccounts" name="getAccounts"></wsdl:input>
+      <wsdl:output message="tns:getAccountsResponse" name="getAccountsResponse"></wsdl:output>
+      <wsdl:fault message="tns:ParaBankServiceException" name="ParaBankServiceException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getTransactions">
+      <wsdl:input message="tns:getTransactions" name="getTransactions"></wsdl:input>
+      <wsdl:output message="tns:getTransactionsResponse" name="getTransactionsResponse"></wsdl:output>
+      <wsdl:fault message="tns:ParaBankServiceException" name="ParaBankServiceException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getTransactionsOnDate">
+      <wsdl:input message="tns:getTransactionsOnDate" name="getTransactionsOnDate"></wsdl:input>
+      <wsdl:output message="tns:getTransactionsOnDateResponse" name="getTransactionsOnDateResponse"></wsdl:output>
+      <wsdl:fault message="tns:ParaBankServiceException" name="ParaBankServiceException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="withdraw">
+      <wsdl:input message="tns:withdraw" name="withdraw"></wsdl:input>
+      <wsdl:output message="tns:withdrawResponse" name="withdrawResponse"></wsdl:output>
+      <wsdl:fault message="tns:ParaBankServiceException" name="ParaBankServiceException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateCustomer">
+      <wsdl:input message="tns:updateCustomer" name="updateCustomer"></wsdl:input>
+      <wsdl:output message="tns:updateCustomerResponse" name="updateCustomerResponse"></wsdl:output>
+      <wsdl:fault message="tns:ParaBankServiceException" name="ParaBankServiceException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="deposit">
+      <wsdl:input message="tns:deposit" name="deposit"></wsdl:input>
+      <wsdl:output message="tns:depositResponse" name="depositResponse"></wsdl:output>
+      <wsdl:fault message="tns:ParaBankServiceException" name="ParaBankServiceException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getTransactionsByToFromDate">
+      <wsdl:input message="tns:getTransactionsByToFromDate" name="getTransactionsByToFromDate"></wsdl:input>
+      <wsdl:output message="tns:getTransactionsByToFromDateResponse" name="getTransactionsByToFromDateResponse"></wsdl:output>
+      <wsdl:fault message="tns:ParaBankServiceException" name="ParaBankServiceException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="shutdownJmsListener">
+      <wsdl:input message="tns:shutdownJmsListener" name="shutdownJmsListener"></wsdl:input>
+      <wsdl:output message="tns:shutdownJmsListenerResponse" name="shutdownJmsListenerResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPosition">
+      <wsdl:input message="tns:getPosition" name="getPosition"></wsdl:input>
+      <wsdl:output message="tns:getPositionResponse" name="getPositionResponse"></wsdl:output>
+      <wsdl:fault message="tns:ParaBankServiceException" name="ParaBankServiceException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="transfer">
+      <wsdl:input message="tns:transfer" name="transfer"></wsdl:input>
+      <wsdl:output message="tns:transferResponse" name="transferResponse"></wsdl:output>
+      <wsdl:fault message="tns:ParaBankServiceException" name="ParaBankServiceException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <wsdl:input message="tns:login" name="login"></wsdl:input>
+      <wsdl:output message="tns:loginResponse" name="loginResponse"></wsdl:output>
+      <wsdl:fault message="tns:ParaBankServiceException" name="ParaBankServiceException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getTransactionsByMonthAndType">
+      <wsdl:input message="tns:getTransactionsByMonthAndType" name="getTransactionsByMonthAndType"></wsdl:input>
+      <wsdl:output message="tns:getTransactionsByMonthAndTypeResponse" name="getTransactionsByMonthAndTypeResponse"></wsdl:output>
+      <wsdl:fault message="tns:ParaBankServiceException" name="ParaBankServiceException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPositionHistory">
+      <wsdl:input message="tns:getPositionHistory" name="getPositionHistory"></wsdl:input>
+      <wsdl:output message="tns:getPositionHistoryResponse" name="getPositionHistoryResponse"></wsdl:output>
+      <wsdl:fault message="tns:ParaBankServiceException" name="ParaBankServiceException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getTransaction">
+      <wsdl:input message="tns:getTransaction" name="getTransaction"></wsdl:input>
+      <wsdl:output message="tns:getTransactionResponse" name="getTransactionResponse"></wsdl:output>
+      <wsdl:fault message="tns:ParaBankServiceException" name="ParaBankServiceException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="setParameter">
+      <wsdl:input message="tns:setParameter" name="setParameter"></wsdl:input>
+      <wsdl:output message="tns:setParameterResponse" name="setParameterResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPositions">
+      <wsdl:input message="tns:getPositions" name="getPositions"></wsdl:input>
+      <wsdl:output message="tns:getPositionsResponse" name="getPositionsResponse"></wsdl:output>
+      <wsdl:fault message="tns:ParaBankServiceException" name="ParaBankServiceException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getTransactionsByAmount">
+      <wsdl:input message="tns:getTransactionsByAmount" name="getTransactionsByAmount"></wsdl:input>
+      <wsdl:output message="tns:getTransactionsByAmountResponse" name="getTransactionsByAmountResponse"></wsdl:output>
+      <wsdl:fault message="tns:ParaBankServiceException" name="ParaBankServiceException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="sellPosition">
+      <wsdl:input message="tns:sellPosition" name="sellPosition"></wsdl:input>
+      <wsdl:output message="tns:sellPositionResponse" name="sellPositionResponse"></wsdl:output>
+      <wsdl:fault message="tns:ParaBankServiceException" name="ParaBankServiceException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="cleanDB">
+      <wsdl:input message="tns:cleanDB" name="cleanDB"></wsdl:input>
+      <wsdl:output message="tns:cleanDBResponse" name="cleanDBResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="requestLoan">
+      <wsdl:input message="tns:requestLoan" name="requestLoan"></wsdl:input>
+      <wsdl:output message="tns:requestLoanResponse" name="requestLoanResponse"></wsdl:output>
+      <wsdl:fault message="tns:ParaBankServiceException" name="ParaBankServiceException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getAccount">
+      <wsdl:input message="tns:getAccount" name="getAccount"></wsdl:input>
+      <wsdl:output message="tns:getAccountResponse" name="getAccountResponse"></wsdl:output>
+      <wsdl:fault message="tns:ParaBankServiceException" name="ParaBankServiceException"></wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="billPay">
+      <wsdl:input message="tns:billPay" name="billPay"></wsdl:input>
+      <wsdl:output message="tns:billPayResponse" name="billPayResponse"></wsdl:output>
+      <wsdl:fault message="tns:ParaBankServiceException" name="ParaBankServiceException"></wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ParaBankSoapBinding" type="tns:ParaBankService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="startupJmsListener">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="startupJmsListener">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="startupJmsListenerResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="buyPosition">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="buyPosition">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="buyPositionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ParaBankServiceException">
+        <soap:fault name="ParaBankServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCustomer">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getCustomer">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getCustomerResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ParaBankServiceException">
+        <soap:fault name="ParaBankServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="initializeDB">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="initializeDB">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="initializeDBResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createAccount">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="createAccount">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="createAccountResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ParaBankServiceException">
+        <soap:fault name="ParaBankServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getAccounts">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getAccounts">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getAccountsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ParaBankServiceException">
+        <soap:fault name="ParaBankServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getTransactions">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getTransactions">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getTransactionsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ParaBankServiceException">
+        <soap:fault name="ParaBankServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getTransactionsOnDate">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getTransactionsOnDate">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getTransactionsOnDateResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ParaBankServiceException">
+        <soap:fault name="ParaBankServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="withdraw">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="withdraw">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="withdrawResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ParaBankServiceException">
+        <soap:fault name="ParaBankServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateCustomer">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="updateCustomer">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateCustomerResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ParaBankServiceException">
+        <soap:fault name="ParaBankServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="deposit">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="deposit">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="depositResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ParaBankServiceException">
+        <soap:fault name="ParaBankServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getTransactionsByToFromDate">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getTransactionsByToFromDate">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getTransactionsByToFromDateResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ParaBankServiceException">
+        <soap:fault name="ParaBankServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="shutdownJmsListener">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="shutdownJmsListener">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="shutdownJmsListenerResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPosition">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getPosition">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getPositionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ParaBankServiceException">
+        <soap:fault name="ParaBankServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="transfer">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="transfer">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="transferResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ParaBankServiceException">
+        <soap:fault name="ParaBankServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="login">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="loginResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ParaBankServiceException">
+        <soap:fault name="ParaBankServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getTransactionsByMonthAndType">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getTransactionsByMonthAndType">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getTransactionsByMonthAndTypeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ParaBankServiceException">
+        <soap:fault name="ParaBankServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPositionHistory">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getPositionHistory">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getPositionHistoryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ParaBankServiceException">
+        <soap:fault name="ParaBankServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getTransaction">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getTransaction">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getTransactionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ParaBankServiceException">
+        <soap:fault name="ParaBankServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="setParameter">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="setParameter">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="setParameterResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPositions">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getPositions">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getPositionsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ParaBankServiceException">
+        <soap:fault name="ParaBankServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getTransactionsByAmount">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getTransactionsByAmount">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getTransactionsByAmountResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ParaBankServiceException">
+        <soap:fault name="ParaBankServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="sellPosition">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="sellPosition">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="sellPositionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ParaBankServiceException">
+        <soap:fault name="ParaBankServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="cleanDB">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="cleanDB">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="cleanDBResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="requestLoan">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="requestLoan">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="requestLoanResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ParaBankServiceException">
+        <soap:fault name="ParaBankServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getAccount">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getAccount">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getAccountResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ParaBankServiceException">
+        <soap:fault name="ParaBankServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="billPay">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="billPay">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="billPayResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="ParaBankServiceException">
+        <soap:fault name="ParaBankServiceException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ParaBank">
+    <wsdl:port binding="tns:ParaBankSoapBinding" name="ParaBankServiceImplPort">
+      <soap:address location="https://parabank.parasoft.com/parabank/services/ParaBank"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://parabank.parasoft.com/parabank/services/ParaBank</con:endpoint></con:endpoints><con:operation id="0df2666c-06fc-49f1-b334-d1209568e8f0" isOneWay="false" action="" name="billPay" bindingOperationName="billPay" type="Request-Response" outputName="billPayResponse" inputName="billPay" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c62138cc-293b-4cd2-a164-aa60015277f0" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://parabank.parasoft.com/parabank/services/ParaBank</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.parabank.parasoft.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ser:billPay>\r
+         <ser:arg0>?</ser:arg0>\r
+         <ser:arg1>?</ser:arg1>\r
+         <ser:arg2>\r
+            <!--Optional:-->\r
+            <accountNumber>?</accountNumber>\r
+            <!--Optional:-->\r
+            <address>\r
+               <!--Optional:-->\r
+               <street>?</street>\r
+               <!--Optional:-->\r
+               <city>?</city>\r
+               <!--Optional:-->\r
+               <state>?</state>\r
+               <!--Optional:-->\r
+               <zipCode>?</zipCode>\r
+            </address>\r
+            <!--Optional:-->\r
+            <name>?</name>\r
+            <!--Optional:-->\r
+            <phoneNumber>?</phoneNumber>\r
+         </ser:arg2>\r
+      </ser:billPay>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://service.parabank.parasoft.com/ParaBankService/billPay"/></con:call></con:operation><con:operation id="8f1851e1-764c-4b24-9344-87e2c0802d5e" isOneWay="false" action="" name="buyPosition" bindingOperationName="buyPosition" type="Request-Response" outputName="buyPositionResponse" inputName="buyPosition" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a30190a6-6cfd-4776-a255-793d08f12ea0" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://parabank.parasoft.com/parabank/services/ParaBank</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.parabank.parasoft.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ser:buyPosition>\r
+         <ser:customerId>?</ser:customerId>\r
+         <ser:accountId>?</ser:accountId>\r
+         <ser:name>?</ser:name>\r
+         <ser:symbol>?</ser:symbol>\r
+         <ser:shares>?</ser:shares>\r
+         <ser:pricePerShare>?</ser:pricePerShare>\r
+      </ser:buyPosition>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://service.parabank.parasoft.com/ParaBankService/buyPosition"/></con:call></con:operation><con:operation id="21aa8817-f7d7-41fb-957e-3ff5625410d0" isOneWay="false" action="" name="cleanDB" bindingOperationName="cleanDB" type="Request-Response" outputName="cleanDBResponse" inputName="cleanDB" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="722324d2-8b17-4265-a41b-2905abc46e2b" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://parabank.parasoft.com/parabank/services/ParaBank</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.parabank.parasoft.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ser:cleanDB/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://service.parabank.parasoft.com/ParaBankService/cleanDB"/></con:call></con:operation><con:operation id="e7923731-5483-4717-bf24-c005c3c0a655" isOneWay="false" action="" name="createAccount" bindingOperationName="createAccount" type="Request-Response" outputName="createAccountResponse" inputName="createAccount" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="97237ccc-8dbd-4fa2-b7f2-f88fad2826ae" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://parabank.parasoft.com/parabank/services/ParaBank</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.parabank.parasoft.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ser:createAccount>\r
+         <ser:customerId>?</ser:customerId>\r
+         <ser:newAccountType>?</ser:newAccountType>\r
+         <ser:fromAccountId>?</ser:fromAccountId>\r
+      </ser:createAccount>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://service.parabank.parasoft.com/ParaBankService/createAccount"/></con:call></con:operation><con:operation id="1b2a8ba3-bfd9-40c1-a9c3-19a0473b2255" isOneWay="false" action="" name="deposit" bindingOperationName="deposit" type="Request-Response" outputName="depositResponse" inputName="deposit" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="05a93c27-4a83-4ef6-b97e-43b64de1ce34" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://parabank.parasoft.com/parabank/services/ParaBank</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.parabank.parasoft.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ser:deposit>\r
+         <ser:accountId>?</ser:accountId>\r
+         <ser:amount>?</ser:amount>\r
+      </ser:deposit>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://service.parabank.parasoft.com/ParaBankService/deposit"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="6fc17168-bee2-4601-9eb8-75833f5e6dd0" isOneWay="false" action="" name="getAccount" bindingOperationName="getAccount" type="Request-Response" outputName="getAccountResponse" inputName="getAccount" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2d88acd9-65ba-4753-9ec6-dc7627fd45c5" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://parabank.parasoft.com/parabank/services/ParaBank</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.parabank.parasoft.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ser:getAccount>\r
+         <ser:accountId>?</ser:accountId>\r
+      </ser:getAccount>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://service.parabank.parasoft.com/ParaBankService/getAccount"/></con:call></con:operation><con:operation id="ad3394a9-3930-4adb-b2c2-99c6fc40f7f6" isOneWay="false" action="" name="getAccounts" bindingOperationName="getAccounts" type="Request-Response" outputName="getAccountsResponse" inputName="getAccounts" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="7443646b-ad9e-45b2-8458-ad0cf8a21486" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://parabank.parasoft.com/parabank/services/ParaBank</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.parabank.parasoft.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ser:getAccounts>\r
+         <ser:customerId>?</ser:customerId>\r
+      </ser:getAccounts>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://service.parabank.parasoft.com/ParaBankService/getAccounts"/></con:call></con:operation><con:operation id="f93d924a-d126-4055-82bf-16ae9c5438d8" isOneWay="false" action="" name="getCustomer" bindingOperationName="getCustomer" type="Request-Response" outputName="getCustomerResponse" inputName="getCustomer" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="aa62a146-baff-4f67-8630-1645606c3f74" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://parabank.parasoft.com/parabank/services/ParaBank</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.parabank.parasoft.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ser:getCustomer>\r
+         <ser:customerId>?</ser:customerId>\r
+      </ser:getCustomer>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://service.parabank.parasoft.com/ParaBankService/getCustomer"/></con:call></con:operation><con:operation id="9ab490b7-dd22-402c-9ddd-79267f794180" isOneWay="false" action="" name="getPosition" bindingOperationName="getPosition" type="Request-Response" outputName="getPositionResponse" inputName="getPosition" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="69887f03-f772-469b-899b-d1aa5dcaeb9d" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://parabank.parasoft.com/parabank/services/ParaBank</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.parabank.parasoft.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ser:getPosition>\r
+         <ser:positionId>?</ser:positionId>\r
+      </ser:getPosition>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://service.parabank.parasoft.com/ParaBankService/getPosition"/></con:call></con:operation><con:operation id="814c9897-a7d6-4b68-9f3f-17aa545cb1ab" isOneWay="false" action="" name="getPositionHistory" bindingOperationName="getPositionHistory" type="Request-Response" outputName="getPositionHistoryResponse" inputName="getPositionHistory" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="249274b2-265a-4fb9-9162-fc8e54fe8d5c" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://parabank.parasoft.com/parabank/services/ParaBank</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.parabank.parasoft.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ser:getPositionHistory>\r
+         <ser:positionId>?</ser:positionId>\r
+         <ser:startDate>?</ser:startDate>\r
+         <ser:endDate>?</ser:endDate>\r
+      </ser:getPositionHistory>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://service.parabank.parasoft.com/ParaBankService/getPositionHistory"/></con:call></con:operation><con:operation id="defad72b-2567-4a42-b16e-ddbf0f7936e2" isOneWay="false" action="" name="getPositions" bindingOperationName="getPositions" type="Request-Response" outputName="getPositionsResponse" inputName="getPositions" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d0a0598d-bb66-422d-899e-1928c7a3de05" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://parabank.parasoft.com/parabank/services/ParaBank</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.parabank.parasoft.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ser:getPositions>\r
+         <ser:customerId>?</ser:customerId>\r
+      </ser:getPositions>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://service.parabank.parasoft.com/ParaBankService/getPositions"/></con:call></con:operation><con:operation id="1df70653-4c45-4c1b-981b-39fd0cf33577" isOneWay="false" action="" name="getTransaction" bindingOperationName="getTransaction" type="Request-Response" outputName="getTransactionResponse" inputName="getTransaction" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d2ef399b-624e-4e4c-a322-14ec64d848aa" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://parabank.parasoft.com/parabank/services/ParaBank</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.parabank.parasoft.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ser:getTransaction>\r
+         <ser:transactionId>?</ser:transactionId>\r
+      </ser:getTransaction>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://service.parabank.parasoft.com/ParaBankService/getTransaction"/></con:call></con:operation><con:operation id="94017cdc-72b0-493b-b6cf-8437c22c6fa0" isOneWay="false" action="" name="getTransactions" bindingOperationName="getTransactions" type="Request-Response" outputName="getTransactionsResponse" inputName="getTransactions" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8ecf43b2-ef87-4d5c-9ad1-9bf05d1f2f79" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://parabank.parasoft.com/parabank/services/ParaBank</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.parabank.parasoft.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ser:getTransactions>\r
+         <ser:accountId>?</ser:accountId>\r
+      </ser:getTransactions>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://service.parabank.parasoft.com/ParaBankService/getTransactions"/></con:call></con:operation><con:operation id="b2db236d-7367-49c3-879a-c11b368d8848" isOneWay="false" action="" name="getTransactionsByAmount" bindingOperationName="getTransactionsByAmount" type="Request-Response" outputName="getTransactionsByAmountResponse" inputName="getTransactionsByAmount" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="1bf64203-9338-41ba-b2dc-99311cd06352" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://parabank.parasoft.com/parabank/services/ParaBank</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.parabank.parasoft.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ser:getTransactionsByAmount>\r
+         <ser:accountId>?</ser:accountId>\r
+         <ser:amount>?</ser:amount>\r
+      </ser:getTransactionsByAmount>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://service.parabank.parasoft.com/ParaBankService/getTransactionsByAmount"/></con:call></con:operation><con:operation id="7bd4d78f-0d29-4b6a-b215-3d5bb8029946" isOneWay="false" action="" name="getTransactionsByMonthAndType" bindingOperationName="getTransactionsByMonthAndType" type="Request-Response" outputName="getTransactionsByMonthAndTypeResponse" inputName="getTransactionsByMonthAndType" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="25b36e6d-c96e-431f-b00d-bccb5ec84865" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://parabank.parasoft.com/parabank/services/ParaBank</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.parabank.parasoft.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ser:getTransactionsByMonthAndType>\r
+         <ser:accountId>?</ser:accountId>\r
+         <ser:month>?</ser:month>\r
+         <ser:type>?</ser:type>\r
+      </ser:getTransactionsByMonthAndType>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://service.parabank.parasoft.com/ParaBankService/getTransactionsByMonthAndType"/></con:call></con:operation><con:operation id="0bafd981-9dfd-4e65-95ed-24e64a98c710" isOneWay="false" action="" name="getTransactionsByToFromDate" bindingOperationName="getTransactionsByToFromDate" type="Request-Response" outputName="getTransactionsByToFromDateResponse" inputName="getTransactionsByToFromDate" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d45f4c7f-9147-4635-b8fe-979d7da43495" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://parabank.parasoft.com/parabank/services/ParaBank</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.parabank.parasoft.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ser:getTransactionsByToFromDate>\r
+         <ser:accountId>?</ser:accountId>\r
+         <ser:fromDate>?</ser:fromDate>\r
+         <ser:toDate>?</ser:toDate>\r
+      </ser:getTransactionsByToFromDate>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://service.parabank.parasoft.com/ParaBankService/getTransactionsByToFromDate"/></con:call></con:operation><con:operation id="340552ef-c736-4840-9a64-ece225005c30" isOneWay="false" action="" name="getTransactionsOnDate" bindingOperationName="getTransactionsOnDate" type="Request-Response" outputName="getTransactionsOnDateResponse" inputName="getTransactionsOnDate" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="b6b2ed2b-0c1e-4169-b8e2-d41a23c06256" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://parabank.parasoft.com/parabank/services/ParaBank</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.parabank.parasoft.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ser:getTransactionsOnDate>\r
+         <ser:accountId>?</ser:accountId>\r
+         <ser:onDate>?</ser:onDate>\r
+      </ser:getTransactionsOnDate>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://service.parabank.parasoft.com/ParaBankService/getTransactionsOnDate"/></con:call></con:operation><con:operation id="97b327c8-8e6d-42ac-a35f-521a9a1cab3c" isOneWay="false" action="" name="initializeDB" bindingOperationName="initializeDB" type="Request-Response" outputName="initializeDBResponse" inputName="initializeDB" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="73f8991f-07d0-4e6d-b28f-fd61810254e5" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://parabank.parasoft.com/parabank/services/ParaBank</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.parabank.parasoft.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ser:initializeDB/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://service.parabank.parasoft.com/ParaBankService/initializeDB"/></con:call></con:operation><con:operation id="e3a3d93d-863d-44aa-80c2-6306da168a69" isOneWay="false" action="" name="login" bindingOperationName="login" type="Request-Response" outputName="loginResponse" inputName="login" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="1be18ef6-27ca-405b-b9ae-34b4c963f8fa" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://parabank.parasoft.com/parabank/services/ParaBank</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.parabank.parasoft.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ser:login>\r
+         <ser:username>?</ser:username>\r
+         <ser:password>?</ser:password>\r
+      </ser:login>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://service.parabank.parasoft.com/ParaBankService/login"/></con:call></con:operation><con:operation id="0269aca3-1973-48ec-b37b-e2b346adebf8" isOneWay="false" action="" name="requestLoan" bindingOperationName="requestLoan" type="Request-Response" outputName="requestLoanResponse" inputName="requestLoan" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a68c9bfb-97ad-41e5-8532-a58a168ae58d" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://parabank.parasoft.com/parabank/services/ParaBank</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.parabank.parasoft.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ser:requestLoan>\r
+         <ser:customerId>?</ser:customerId>\r
+         <ser:amount>?</ser:amount>\r
+         <ser:downPayment>?</ser:downPayment>\r
+         <ser:fromAccountId>?</ser:fromAccountId>\r
+      </ser:requestLoan>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://service.parabank.parasoft.com/ParaBankService/requestLoan"/></con:call></con:operation><con:operation id="25ff415e-d43d-41f9-91a1-b1997fc57f67" isOneWay="false" action="" name="sellPosition" bindingOperationName="sellPosition" type="Request-Response" outputName="sellPositionResponse" inputName="sellPosition" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="b7539f24-b9fa-46fd-b209-9009d8c37fa2" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://parabank.parasoft.com/parabank/services/ParaBank</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.parabank.parasoft.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ser:sellPosition>\r
+         <ser:customerId>?</ser:customerId>\r
+         <ser:accountId>?</ser:accountId>\r
+         <ser:positionId>?</ser:positionId>\r
+         <ser:shares>?</ser:shares>\r
+         <ser:pricePerShare>?</ser:pricePerShare>\r
+      </ser:sellPosition>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://service.parabank.parasoft.com/ParaBankService/sellPosition"/></con:call></con:operation><con:operation id="a0f1df8c-5114-4e10-b15b-0f99d067f360" isOneWay="false" action="" name="setParameter" bindingOperationName="setParameter" type="Request-Response" outputName="setParameterResponse" inputName="setParameter" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="61345e97-fece-4eaa-833c-51800a46999c" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://parabank.parasoft.com/parabank/services/ParaBank</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.parabank.parasoft.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ser:setParameter>\r
+         <ser:name>?</ser:name>\r
+         <ser:value>?</ser:value>\r
+      </ser:setParameter>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://service.parabank.parasoft.com/ParaBankService/setParameter"/></con:call></con:operation><con:operation id="b3d4f081-595c-446a-a4e9-68d6d64327a7" isOneWay="false" action="" name="shutdownJmsListener" bindingOperationName="shutdownJmsListener" type="Request-Response" outputName="shutdownJmsListenerResponse" inputName="shutdownJmsListener" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5c8224e5-58a0-41e1-881e-5e4ab278db0e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://parabank.parasoft.com/parabank/services/ParaBank</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.parabank.parasoft.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ser:shutdownJmsListener/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://service.parabank.parasoft.com/ParaBankService/shutdownJmsListener"/></con:call></con:operation><con:operation id="6043c2c8-d671-4845-b1a6-8b5dc1b5bdd1" isOneWay="false" action="" name="startupJmsListener" bindingOperationName="startupJmsListener" type="Request-Response" outputName="startupJmsListenerResponse" inputName="startupJmsListener" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="29145d37-ba6e-47ca-9621-e84ab2551614" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://parabank.parasoft.com/parabank/services/ParaBank</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.parabank.parasoft.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ser:startupJmsListener/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://service.parabank.parasoft.com/ParaBankService/startupJmsListener"/></con:call></con:operation><con:operation id="fed9ac86-8bd2-4c1d-9887-f73b72c619af" isOneWay="false" action="" name="transfer" bindingOperationName="transfer" type="Request-Response" outputName="transferResponse" inputName="transfer" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3a584a6f-ac61-4686-aad1-1bb9b69eaae9" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://parabank.parasoft.com/parabank/services/ParaBank</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.parabank.parasoft.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ser:transfer>\r
+         <ser:fromAccountId>?</ser:fromAccountId>\r
+         <ser:toAccountId>?</ser:toAccountId>\r
+         <ser:amount>?</ser:amount>\r
+      </ser:transfer>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://service.parabank.parasoft.com/ParaBankService/transfer"/></con:call></con:operation><con:operation id="b2795ecc-7fe9-4c1d-b8b0-035579bfa87a" isOneWay="false" action="" name="updateCustomer" bindingOperationName="updateCustomer" type="Request-Response" outputName="updateCustomerResponse" inputName="updateCustomer" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="b54c90ba-3e3a-4687-9522-a95f6e0b786c" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://parabank.parasoft.com/parabank/services/ParaBank</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.parabank.parasoft.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ser:updateCustomer>\r
+         <ser:customerId>?</ser:customerId>\r
+         <ser:firstName>?</ser:firstName>\r
+         <ser:lastName>?</ser:lastName>\r
+         <ser:street>?</ser:street>\r
+         <ser:city>?</ser:city>\r
+         <ser:state>?</ser:state>\r
+         <ser:zipCode>?</ser:zipCode>\r
+         <ser:phoneNumber>?</ser:phoneNumber>\r
+         <ser:ssn>?</ser:ssn>\r
+         <ser:username>?</ser:username>\r
+         <ser:password>?</ser:password>\r
+      </ser:updateCustomer>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://service.parabank.parasoft.com/ParaBankService/updateCustomer"/></con:call></con:operation><con:operation id="0506ee2d-78f6-4d89-bea8-5aded805f717" isOneWay="false" action="" name="withdraw" bindingOperationName="withdraw" type="Request-Response" outputName="withdrawResponse" inputName="withdraw" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2a67bfae-f652-4686-9f37-17244ae889c4" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://parabank.parasoft.com/parabank/services/ParaBank</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.parabank.parasoft.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ser:withdraw>\r
+         <ser:accountId>?</ser:accountId>\r
+         <ser:amount>?</ser:amount>\r
+      </ser:withdraw>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://service.parabank.parasoft.com/ParaBankService/withdraw"/></con:call></con:operation></con:interface><con:testSuite id="43e4a661-dbb9-4512-baf2-d410deced817" name="TestCases"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="bddc998f-6f47-4bbf-ae9e-01816a2ef9e3" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="UpdateCustomer" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Groovy Script" id="6da934a2-89e1-4dde-a535-a7a3f984dd01"><con:settings/><con:config><script>@Grab('org.apache.poi:poi:3.9')
+
+import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.hssf.usermodel.*;
+import org.apache.poi.xssf.usermodel.*;
+import org.apache.poi.ss.util.*;
+import org.apache.poi.ss.usermodel.*;
+import java.io.*;
+
+class ExcelReader {
+ 
+  def readData() {
+        def path = "D:\\WebServices\\Parabank_TestData.xlsx";
+        InputStream inputStream = new FileInputStream(path);
+        Workbook workbook = WorkbookFactory.create(inputStream);
+        Sheet sheet = workbook.getSheetAt(0);
+                     
+        Iterator rowIterator = sheet.rowIterator();
+        rowIterator.next()
+        Row row;                       
+        def rowsData = []
+        while(rowIterator.hasNext()) {
+             row = rowIterator.next()
+             def rowIndex = row.getRowNum()
+             def colIndex;
+             def rowData = []
+             for (Cell cell : row) {
+                 colIndex = cell.getColumnIndex()
+                  rowData[colIndex] = cell.getRichStringCellValue().getString();
+             }                    
+             rowsData &lt;&lt; rowData
+         }
+         rowsData
+  }
+ }
+
+def groovyUtils = new com.eviware.soapui.support.GroovyUtils(context)
+def myTestCase = context.testCase
+
+ExcelReader excelReader = new ExcelReader();
+</script></con:config></con:testStep><con:testStep type="request" name="Login" id="c92864a3-355b-498c-a30f-aa2c42b4c597"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ParaBankSoapBinding</con:interface><con:operation>login</con:operation><con:request name="Login" id="fddae24d-92d9-46a0-9f01-c39257817f80"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://parabank.parasoft.com/parabank/services/ParaBank</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.parabank.parasoft.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ser:login>\r
+         <ser:username>john</ser:username>\r
+         <ser:password>demo</ser:password>\r
+      </ser:login>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="68d920f9-bae9-4f2b-8b52-40282f0ff8ea"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="Groovy Script2" id="30265e73-2f5b-4266-af80-20cfc24de32d"><con:settings/><con:config><script>import org.apache.poi.xssf.usermodel.*;
+
+def fs=new FileInputStream("D:\\WebServices\\Parabank_TestData.xlsx")
+
+def wb= new XSSFWorkbook(fs)
+def Sheet1= wb.getSheet("Sheet1")
+
+log.info Sheet1.getPysicalNumberOfRows()</script></con:config></con:testStep><con:testStep type="groovy" name="Groovy Scriptjxl" id="385f5e50-3830-49b3-849e-3c8c0f8b5a96"><con:settings/><con:config><script>import jxl.*
+
+def excelFilePath = "D:\\WebServices\\Parabank_TestData.xls"
+
+File excelFile = new File(excelFilePath)
+
+Workbook wb=Workbook.getWorkbook(excelFile)
+
+Sheet sheet=wb.getSheet(0)
+
+int noOfRows=sheet.getRows()-1//number of rows in the excel
+
+log.info "noOfRows= $noOfRows"
+ for (int rowId in 1..noOfRows){
+ 	log.warn'--------------------------------'
+ 	log.info sheet.getCell(0,rowId).getContents()
+ 	log.info sheet.getCell(1,rowId).getContents()
+ 	log.info sheet.getCell(2,rowId).getContents()
+ 	log.warn'--------------------------------'
+ }
+
+wb.close()
+
+</script></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="2c003df8-e0b2-4a72-a7e1-3a27c0e95fea" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Customer_Account" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Groovy Script" id="59900cff-205a-4dc4-9ac4-ea4c4ead3890"><con:settings/><con:config><script>import jxl.*
+
+def TestCase =context.testCase
+def count
+def excelFilePath = "D:\\WebServices\\Parabank_TestData.xls"
+
+File excelFile = new File(excelFilePath)
+
+Workbook wb=Workbook.getWorkbook(excelFile)
+
+Sheet sheet=wb.getSheet(0)
+
+int noOfRows=sheet.getRows()-1//number of rows in the excel
+
+PropertiesTestStep=TestCase.getTestStepByName("Properties")
+count =PropertiesTestStep.getPropertyValue("Counter").toInteger()
+log.info count
+log.info "noOfRows= $noOfRows"
+
+//If Total Records is unknown (at start) get the rowcount from Excel
+
+if(PropertiesTestStep.getPropertyValue("Total").toString()=="")
+	PropertiesTestStep.setPropertyValue("Total",noOfRows.toString())
+count++
+
+log.info count
+Cell userName = sheet.getCell(0,count)
+Cell password = sheet.getCell(1,count)
+Cell customerId = sheet.getCell(2,count)
+Cell State = sheet.getCell(3,count)
+Cell AccountType = sheet.getCell(4,count)
+log.info ("Count is : "+ count.toString() + "User Name : " +userName.getContents()+"Password : "+password.getContents()+"CustomerId :"
++ customerId.getContents()+" State : "+State.getContents()+ " AccountType : "+AccountType.getContents())
+wb.close()
+
+PropertiesTestStep.setPropertyValue("Username",userName.getContents())
+PropertiesTestStep.setPropertyValue("Password",password.getContents())
+PropertiesTestStep.setPropertyValue("CustomerId",customerId.getContents())
+PropertiesTestStep.setPropertyValue("State",State.getContents())
+PropertiesTestStep.setPropertyValue("AccountType",AccountType.getContents())
+if(count == PropertiesTestStep.getPropertyValue("Total").toInteger()-1)
+	PropertiesTestStep.setPropertyValue("End","True")</script></con:config></con:testStep><con:testStep type="request" name="Login" id="a940c42a-5d73-4c42-8baf-b50f0b8c215d"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ParaBankSoapBinding</con:interface><con:operation>login</con:operation><con:request name="Login" id="c7b8de66-d7a2-4ab3-ab3d-1edb90b52183"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://parabank.parasoft.com/parabank/services/ParaBank</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.parabank.parasoft.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ser:login>\r
+         <ser:username>${Properties#Username}</ser:username>\r
+         <ser:password>${Properties#Password}</ser:password>\r
+      </ser:login>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="2669e3d0-3552-4ba8-b6cf-f99f18aacb92"/><con:assertion type="Valid HTTP Status Codes" id="eff6ef00-661f-40a1-8b1c-b212f2afdd4b" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="getAccounts" id="3ecd2da6-d2b6-4c8d-a635-486048c9d5c4"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ParaBankSoapBinding</con:interface><con:operation>getAccounts</con:operation><con:request name="getAccounts" id="86d199af-159f-4857-987f-7ca4c7d09379"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://parabank.parasoft.com/parabank/services/ParaBank</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.parabank.parasoft.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ser:getAccounts>\r
+         <ser:customerId>${Login#Response#//ns2:loginResponse/ns2:customerId/id}</ser:customerId>\r
+      </ser:getAccounts>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="4f3dd234-9b3a-46a7-b434-0f8ad54fe4c5"/><con:assertion type="Valid HTTP Status Codes" id="60b60847-01bc-44bd-9eb2-b6351cc6aa3d" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer" id="f7275b32-d302-49b8-b8b0-076d4a5bf4e8"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>AccountId</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>getAccounts</con:sourceStep><con:sourcePath>${getAccounts#Response#//ns2:getAccountsResponse/ns2:account[1]/id}</con:sourcePath><con:targetType>AccountId</con:targetType><con:targetStep>Properties</con:targetStep><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="request" name="CreateAccount" id="14cef4d3-bdb8-4534-822a-9be4b0849bf4"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ParaBankSoapBinding</con:interface><con:operation>createAccount</con:operation><con:request name="CreateAccount" id="81b73c89-0913-43d5-ac85-1e2152be7486"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://parabank.parasoft.com/parabank/services/ParaBank</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://service.parabank.parasoft.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ser:createAccount>\r
+         <ser:customerId>${Login#Response#//ns2:loginResponse/ns2:customerId/id}</ser:customerId>\r
+         <ser:newAccountType>${Properties#AccountType}</ser:newAccountType>\r
+         <ser:fromAccountId>${Properties#AccountId}</ser:fromAccountId>\r
+      </ser:createAccount>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="cc3d2242-3563-4342-9bdd-c99986dbf6e4"/><con:assertion type="Valid HTTP Status Codes" id="95f9b836-d8e8-423a-a09d-578cd9002806" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" id="b02c32c8-9472-4516-9b0d-56c83a904851" name="Script Assertion"><con:configuration><scriptText>import com.eviware.soapui.support.XmlHolder
+
+def holder =new XmlHolder( messageExchange.responseContentAsXml)
+
+def accountId = holder.getNodeValue("//ns2:createAccountResponse/ns2:account/id")
+
+assert accountId != ""</scriptText></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="Groovy Script-data Loop" id="08ca8537-78d9-46e2-9650-26a9a1e0d78f"><con:settings/><con:config><script>def TestCase =context.testCase
+PropertiesTestStep =TestCase.getTestStepByName("Properties")
+Stop = PropertiesTestStep.getPropertyValue("End").toString()
+
+if(Stop=="True")
+	log.info("Exit Groovy Script --DataLoop")
+else
+	testRunner.gotoStepByName("Groovy Script")</script></con:config></con:testStep><con:testStep type="properties" name="Properties" id="4e12f42f-93a1-479c-ba91-884570aa685d"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>Username</con:name><con:value>john</con:value></con:property><con:property><con:name>Password</con:name><con:value>demo</con:value></con:property><con:property><con:name>Counter</con:name><con:value>0</con:value></con:property><con:property><con:name>End</con:name><con:value>True</con:value></con:property><con:property><con:name>CustomerId</con:name><con:value>12212</con:value></con:property><con:property><con:name>State</con:name><con:value>CA</con:value></con:property><con:property><con:name>AccountType</con:name><con:value>0</con:value></con:property><con:property><con:name>Total</con:name><con:value>2</con:value></con:property><con:property><con:name>AccountId</con:name><con:value>13344</con:value></con:property></con:properties></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
